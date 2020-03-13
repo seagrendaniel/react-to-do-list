@@ -1,12 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './Components/App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let toDoItems = [];
+toDoItems.push({ id: 1, body: 'Apply to Sci Find', done: true });
+toDoItems.push({ id: 2, body: 'Build a TODOs App', done: false });
+toDoItems.push({ id: 3, body: 'Make billions', done: false });
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.querySelector('#root'));
